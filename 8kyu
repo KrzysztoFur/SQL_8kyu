@@ -1,0 +1,37 @@
+--8 kyu Multiply SQL:
+SELECT (price * amount) AS total FROM items
+
+--8 kyu Easy SQL - Ordering SQL:
+select * FROM companies
+order by employees desc
+
+--8 kyu Beginner Series #2 Clock SQL:
+select (h*60*60*1000 + m*60*1000 + s*1000) as res from past
+
+--8 kyu Opposite number SQL:
+-- You will be given a table: "opposite", with a column: "number". Return a table with a column: "res".
+SELECT (number*-1) as res from opposite
+
+--8 kyu Adults only (SQL for Beginners #1) SQL:
+--Your code here
+SELECT * FROM users
+where age >= 18
+
+--8 kyu SQL Basics: Simple DISTINCT SQL:
+-- Create your SELECT statement here
+SELECT DISTINCT(age) FROM people
+
+--8 kyu Keep Hydrated! SQL:
+SELECT id, hours, FLOOR(hours*0.5) as liters FROM cycling
+
+--8 kyu Easy SQL: Square Root and Log SQL:
+/* SQL */
+select SQRT(number1) as root, log10(number2) as log from decimals
+
+--8 kyu SQL Basics: Mod SQL:
+/*  SQL  */
+select MOD(number1,number2) as mod from decimals
+
+--8 kyu Easy SQL: Rounding Decimals SQL:
+/*  SQL  */
+SELECT FLOOR(number1) as number1, CEILING(number2) as number2 FROM decimals
