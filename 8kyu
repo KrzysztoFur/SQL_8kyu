@@ -35,3 +35,8 @@ select MOD(number1,number2) as mod from decimals
 --8 kyu Easy SQL: Rounding Decimals SQL:
 /*  SQL  */
 SELECT FLOOR(number1) as number1, CEILING(number2) as number2 FROM decimals
+
+--8 kyu 1. Find all active students SQL:
+-- Type your query here
+SELECT * FROM students
+WHERE IsActive = 1
