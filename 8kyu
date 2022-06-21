@@ -40,3 +40,11 @@ SELECT FLOOR(number1) as number1, CEILING(number2) as number2 FROM decimals
 -- Type your query here
 SELECT * FROM students
 WHERE IsActive = 1
+
+--8 kyu SQL Basics: Simple WHERE and ORDER BY SQL:
+-- Create your SELECT statement here
+SELECT * FROM people 
+WHERE age > 50 
+ORDER BY age desc
+
+
