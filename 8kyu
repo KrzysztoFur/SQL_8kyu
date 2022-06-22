@@ -47,4 +47,30 @@ SELECT * FROM people
 WHERE age > 50 
 ORDER BY age desc
 
+--8 kyu SQL Basics: Simple SUM SQL:
+SELECT SUM(age) as age_sum FROM people 
 
+--8 kyu SQL Basics: Simple MIN / MAX SQL:
+SELECT MIN(age) as age_min, MAX(age) as age_max FROM people
+
+--8 kyu SQL Grasshopper: Select Columns SQL:
+SELECT custid, custname, custstate FROM customers
+
+--8 kyu On the Canadian Border (SQL for Beginners #2) SQL:
+SELECT name, country FROM travelers 
+WHERE country NOT IN ('Canada', 'Mexico', 'USA')
+
+--8 kyu Register for the Party (SQL for Beginners #3) SQL:
+INSERT INTO participants
+VALUES ('MyName', 22, True);
+SELECT * FROM participants;
+
+--8 kyu Collect Tuition (SQL for Beginners #4) SQL:
+SELECT * FROM students 
+WHERE tuition_received = FALSE
+
+--8 kyu Easy SQL: LowerCase SQL:
+SELECT id, name, birthday, LOWER(race) as race FROM demographics
+
+--8 kyu Returning Strings SQL:
+SELECT ('Hello, ' || name || ' how are you doing today?') as greeting FROM  person
