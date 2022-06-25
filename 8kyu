@@ -74,3 +74,32 @@ SELECT id, name, birthday, LOWER(race) as race FROM demographics
 
 --8 kyu Returning Strings SQL:
 SELECT ('Hello, ' || name || ' how are you doing today?') as greeting FROM  person
+
+
+--8 kyu Grasshopper - Messi goals function SQL:
+-- you will be given a table, goals, with columns la_liga_goals, copa_del_rey_goals, and champions_league_goals. Return a table with a column, res.
+SELECT la_liga_goals + copa_del_rey_goals + champions_league_goals as res FROM goals
+
+--8 months agoRefactor
+-- you will be given a table, goals, with columns la_liga_goals, copa_del_rey_goals, and champions_league_goals. Return a table with a column, res.
+SELECT la_liga_goals + copa_del_rey_goals + champions_league_goals as res FROM goals
+
+--8 kyu Grasshopper - Terminal game move function SQL:
+--# write your statement here: you will be given a table 'moves' with columns 'position' and 'roll'. return a table with a column 'res'. #--
+SELECT position, roll, (position+roll*2) as res FROM moves
+
+--8 kyu Grasshopper - Check for factor SQL:
+-- you will be given a table 'kata' with columns 'id', 'base', and 'factor'. 
+-- return the 'id' and your result in a column named 'res'.
+SELECT id,(base%factor)=0 as res FROM kata
+
+
+
+
+
+
+
+
+
+
+
