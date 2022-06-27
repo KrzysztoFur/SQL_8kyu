@@ -93,13 +93,38 @@ SELECT position, roll, (position+roll*2) as res FROM moves
 -- return the 'id' and your result in a column named 'res'.
 SELECT id,(base%factor)=0 as res FROM kata
 
+--7 kyu SQL Basics: Raise to the Power SQL:
+/*  SQL  */
+select POWER(number1,number2) as result from decimals
 
+--8 kyu Even or Odd SQL:
+--Write your SQL statement here--
 
+Select 
+CASE
+    WHEN MOD(number,2)=0 THEN 'Even'
+    ELSE 'Odd'
+END as is_even
+from numbers
 
+-- 8 kyu Century From Year SQL:
+--your statment goes here--
+SELECT (1 + (yr - 1) / 100) as century FROM years
 
+--8 kyu Expressions Matter SQL:
+SELECT GREATEST(a+b+c, a*(b+c), a*b*c, a+b*c, (a+b)*c) as res FROM expression_matter;
+/* your query - you are given columns a, b, and c */
 
+8 kyu Is n divisible by x and y? SQL:
+-- you will be given a table 'kata' with columns 'n', 'x', and 'y'. Return the 'id' and your result in a column named 'res'.
+select 
+row_number() over() as id,
+case when n%x=0 and n%y=0then true
+else false end res
+from kata
 
-
+--7 kyu Sum of angles SQL:
+select (n-2)*180 as res from angle
 
 
 
