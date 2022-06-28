@@ -126,5 +126,61 @@ from kata
 --7 kyu Sum of angles SQL:
 select (n-2)*180 as res from angle
 
+--6 kyu SQL Basics: Simple HAVING SQL:
+-- Create your SELECT statement here
+
+SELECT age, COUNT(name) as total_people FROM people 
+GROUP BY age
+HAVING COUNT(name) >= 10
+
+--6 kyu SQL Basics - Monsters using CASE SQL: /*  SQL  */
+
+SELECT th.id,
+heads, 
+legs, 
+arms, 
+tails,  
+CASE  
+WHEN heads > arms THEN 'BEAST'
+WHEN tails > legs THEN 'BEAST'
+ELSE 'WEIRDO'
+END AS species
+
+FROM top_half th JOIN bottom_half bh on th.id=bh.id
+ORDER BY species 
+
+-- 6 kyu SQL Basics: Simple UNION ALL SQL:
+-- Create your SELECT statement here
+SELECT location,  id, name, price, card_name, card_number, transaction_date FROM
+(
+SELECT 
+'US' as location, id,  name, price, card_name, card_number, transaction_date from ussales  
+  WHERE price > 50.00 
+UNION ALL 
+select 
+'EU' as location, id,  name, price, card_name, card_number, transaction_date from eusales 
+  WHERE price > 50.00 
+  
+) as a
+ORDER BY location desc, id asc
+
+--6 kyu SQL Basics: Simple WITH SQL:
+WITH special_sales 
+AS (
+SELECT 
+d.id,
+department_id,
+  d.name,
+price,
+card_name,
+card_number,
+transaction_date
+  FROM sales s
+  join departments d on s.department_id = d.id
+WHERE Price IN (SELECT Price FROM sales where price > 90.00)
+)
+SELECT distinct id, name from special_sales
+ORDER BY id asc
+
 
 
