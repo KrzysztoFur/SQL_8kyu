@@ -235,4 +235,25 @@ Sum of angles
 SQL:
 select (n-2)*180 as res from angle
 
+6 kyu
+SQL Basics: Simple IN
+SQL:
+-- Create your SELECT statement here
+
+SELECT id, name FROM departments 
+WHERE id IN (SELECT department_id FROM sales WHERE price > 98)
+
+
+6 kyu
+SQL: Regex AlphaNumeric Split
+SQL:
+/*  SQL  */
+
+select project,
+       regexp_replace(address, '\d', '', 'g') as letters,
+       regexp_replace(address, '\D', '', 'g') as numbers
+from repositories;
+
+
+
 
